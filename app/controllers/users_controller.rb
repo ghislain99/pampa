@@ -14,11 +14,13 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
+	@titre = "Sign up"
     @user = User.new
   end
 
   # GET /users/1/edit
   def edit
+	@titre = "Edit your information"
   end
 
   # POST /users
