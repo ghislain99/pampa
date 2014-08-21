@@ -1,4 +1,6 @@
 Pampa::Application.routes.draw do
+	resources :users
+	
 	get '/', :to => 'pages#home'
 	get '/contact', :to => 'pages#contact'
 	get '/about',   :to => 'pages#about'
@@ -7,8 +9,6 @@ Pampa::Application.routes.draw do
 	get "users/new"
 	get '/signup',  :to => 'users#new'
 	
-	resources :users
-	  
 	root :to => 'pages#home'
  
 end
