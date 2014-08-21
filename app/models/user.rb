@@ -12,9 +12,6 @@
 class User < ActiveRecord::Base
 	#recommandé pour la sécurité de l'appli
 	attr_accessor :password
-	def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
-    end
 	
 	email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	
