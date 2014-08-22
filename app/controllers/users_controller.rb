@@ -27,11 +27,13 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-	@user = User.new(params[:user])
+	@user = User.new(user_params)
 	if @user.save
-	  redirect_to @user
+		sign_in @user
+	  flash[:success] = "Bienvenue!"
+      redirect_to @user
 	else
-	  @titre = "Inscription"
+	  @titre = "Sign up"
 	  render 'new'
 	end
   end

@@ -30,10 +30,18 @@ class User < ActiveRecord::Base
 		# Compare encrypted_password avec la version cryptée de password_soumis.
 		encrypted_password == encrypt(password_soumis)
 	end
+	
 	def self.authenticate(email, submitted_password)
 		user = find_by_email(email)
 		return nil  if user.nil?
 		return user if user.has_password?(submitted_password)
+	end
+	
+	#http://french.railstutorial.org/chapters/sign-in-sign-out#top
+	#authenticate_with_salt commence par trouver l'utilisateur par son id unique, et vérifie alors que le salt enregistré dans le cookie est bien celui de l'utilisateur.
+	def self.authenticate_with_salt(id, cookie_salt)
+		user = find_by_id(id)
+		(user && user.salt == cookie_salt) ? user : nil
 	end
   
 	private
