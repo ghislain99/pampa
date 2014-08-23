@@ -37,5 +37,10 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
-# Avatar for users
+#Gem for Authentication (added here but in 0.1 a custom Authenticate is used)
+gem 'devise'
+#Gem for Facebook Authentication (added here but not implemented (planned for version 0.1) => https://github.com/plataformatec/devise/wiki/OmniAuth%3a-Overview
+#gem 'omniauth-facebook'
+
+# Avatar for users (Must be changed with a custom solution)
 gem 'gravatar_image_tag'

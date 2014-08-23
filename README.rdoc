@@ -1,8 +1,23 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is pampa. Development version
+-------------
 
+TODO
+Ajouter Mantis pour suivre les points suivants
+
+General
+- Autoriser les caracteres speciaux (accents...) dans le code
+
+User (Lot 1)
+- Ajouter les fonctionnalites Admin (existe en base de donnees mais fonctions à creer)
+- Permettre l'edition de son propre profil
+- Empecher qu un utilisateur puisse changer les data d un autre s'il n'est pas admin
+
+User (Lot 2)
+- Prevoir un custom logo en remplacement de Gravatar
+
+-------------
 Things you may want to cover:
 
 * Ruby version

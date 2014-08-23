@@ -3,5 +3,6 @@
 <p>
   HOMEPAGE content
 </p>
-
-<%= link_to "Sign up now!", '#', :class => "signup_button round" %>
+<% if not user_signed_in?  %>
+	<%= link_to "Sign up now!", new_user_registration_path, :class => "signup_button round" %>
+<% end %>
